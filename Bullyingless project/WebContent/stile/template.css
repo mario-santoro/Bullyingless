@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: whitesmoke;
+	font-family: 'Hind Madurai', sans-serif;
+}
+
+
+
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+#menu a:hover{
+	transform: scale(1.1,1.1)
+}
+
+#ricerca-content{
+	width: 90%;
+	text-align: center;
+}
+
+
+#ricerca-content input,button{
+	height: 45px;
+	margin: 0;
+	border: 0;
+	padding: 15px;
+	outline: none;
+	vertical-align: bottom;
+}
+
+#ricerca-content button{
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: white;
+	color: #3B3B3B;
+}
+#ricerca-content button:hover{
+	color: black;
+}
+#ricerca-content input{
+	width: 400px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	font-size: 1.1em;
+}
+
+#ricerca{
+	display: inline-block;
+	margin-top: 35px;
+	border-radius: 13px;
+	border: 3px solid #95E0F0;
+}
+.ombra{
+	-webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+	
+}
+
+
+#login-content{
+	width: 10%;
+	position: absolute;
+	left: 90%;
+	top: 35px;
+	text-align: center;	
+}
+
+#login-content button{
+	margin: 0;
+	outline: none;
+	background-color: #40CB50;
+	padding-bottom: 35px;
+	border-radius: 10px;
+	color: white;
+	font-weight: bold;
+	font-size: 1.2em;
+	
+}
+.glyphicon-log-in{
+	font-size: 1.2em;
+}
+#text-login , .glyphicon-log-in{
+	display: inline-block;
+	vertical-align: top;
+}
+
+	

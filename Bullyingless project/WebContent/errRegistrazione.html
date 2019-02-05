@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento senza titolo</title>
+<link href="stile/registrazione.css" rel="stylesheet" type="text/css">
+<link href="stile/template.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Hind+Madurai" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <script>
+function off2() {
+   document.getElementById("overlay2").style.display = "none";
+ }
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+ </script>
+  
+</head>
+<body>
+<nav>
+<div id="immagine">
+    	<img src="img/logo.jpg"/> 
+  </div>
+	
+	
+	
+</nav>
+<div id="spazio"></div>
+<main onClick="removeOmbra()">
+	
+	<div id="overlay">
+		<div id="popOfferta">
+		<span class="glyphicon glyphicon-remove" onclick="off()"></span>
+			<h2>Login non effettuato correttamente</h2>
+			
+			
+			<div class="btnContent">
+				<a href="index.html"><input class="btn-overlay" value="si" type="button" ></a>
+				<a href="registrazione.html"><input id="annulla2" class="btn-overlay" value="no" type="button" onclick="off()"></a>
+			</div>
+			
+		</div>
+	</div>
+	
+	
+	<div id="overlay2">
+		<div id="popOfferta2">
+		<span class="glyphicon glyphicon-remove" onclick="off2()"></span>
+			<h2>Registrzione non a buon fine</h2>
+			<br>
+			<h2>inserisci i dati correttamente</h2>	
+			
+			<div class="btnContent">
+				
+				<input class="btn-overlay" value="Continua" type="button" onclick="off2()">
+				<br>
+				<span>Ancora problemi? <a href="assistenza.html">Contatta Assistenza</a></span>
+			</div> 
+			
+		</div>
+	</div>
+	
+	
+	<div id="ContenitoreRegistrazione">
+	
+<h2>La tua registrazione richiederà solo un minuto</h2>
+<br>
+	<!-- Form di Registrazione -->
+	
+	<div id="registrazione">
+
+	
+	  <label>Nome</label>
+	  <br>
+      <input type="text" class="FormInput"  name="Nome" placeholder="Nome" required/>
+      <br>
+       <br>
+      <label>Cognome</label>
+      <br>
+      <input type="text" class="FormInput" name="Cognome" placeholder="Cognome" required />
+      <br>
+       <br>
+         <label>Nickname</label>
+      <br>
+      <input type="text" class="FormInput" name="nickname" placeholder="Nickname" required />
+      <br>
+       <br>
+      <label>Sesso</label>
+      <br>
+      <select  class="FormInput" name="sex" required >
+      <option>Uomo</option>
+      <option>Donna</option>
+      </select>
+      <br>
+       <br>
+    <label>Data di nascita</label>
+    <br>
+      <input type="date" class="FormInput" name="data" placeholder="nascita" required />
+      <br>
+       <br>
+      <label>E-mail</label>
+      <br>
+     <input class="FormInput" type="email" name="Email" placeholder="Email" required />
+     <br>
+      <br>
+   <label>Password</label>
+   <br>
+      <input class="FormInput"  type="password" name="Password" id="Password" placeholder="Password" required />
+      <br>
+       <br>
+      <label>Conferma Password</label>
+      <br>
+      <input class="FormInput"  type="password" name="ConfermaPassword" placeholder="ConfermaPassword" required />
+    <br>
+     <br>
+     <input id="annulla" class="btnR" type="submit" value="Annulla registrzione" onclick="on()"/>
+    <a href="indexReg.html"><input class="btnR" type="submit" value="Registrati(simula)"/></a>
+    <br>
+      <a href="errRegistrazione.html"><span>(simula registrazione errata)</span></a>
+      
+	</div>
+
+</div>
+	
+</main>
+
+
+
+<footer> 
+		<div id="imgContent">
+			<div id="socialBar">
+				<span id="labelSocial">Seguici su:</span>
+				<span><a href="#" class="linkFooter"><img src="img/facebook.svg" width="32" height="32"></a></span>
+				<span><a href="#" class="linkFooter"><img src="img/instagram.svg" width="32" height="32"></a></span>
+				<span><a href="#" class="linkFooter"><img src="img/twitter.svg" width="32" height="32"></a></span>
+				<span><a href="#" class="linkFooter"><img src="img/linkedin.svg" width="32" height="32"></a></span>
+			</div>
+		</div>
+		<div id="contentWrapper">	
+				<div id="assistenza" class="footerComponent">
+							<h5 class="text-uppercase">ASSISTENZA</h5>
+							<a href="assistenza.jsp" class="linkFooter"><p>Domande frequenti</p></a>
+							<a href="assistenza.jsp" class="linkFooter"><p>Check-in online</p></a>
+							<a href="assistenza.jsp" class="linkFooter"><p>Metodi di pagamento</p></a>
+							<a href="assistenza.jsp" class="linkFooter"><p>Bagagli</p></a>
+							<a href="assistenza.jsp" class="linkFooter"><p>Ritardi e cancellazione</p></a>
+				</div>
+				<div id="contatti" class="footerComponent">
+							<h5 class="text-uppercase">CONTATTI</h5>
+							<a href="#" class="linkFooter"><p>Tel: 555-00000</p></a>
+							<a href="#" class="linkFooter"><p>e-mail:info@unisair.com</p></a>
+
+				</div>
+				
+		</div>	
+		<div id="infoFooter">
+					<span class="titleInfo">Bullyingless</span>
+					<span class="info"><a href="#">Utilizzo dei cookie</a></span>
+					<span class="info"><a href="#">Infotmazioni legali</a></span>
+					<span class="info"><a href="#">Informativa sulla privacy</a></span>
+				</div>
+	</footer>
+
+
+
+
+<script>
+	function addOmbra()
+	{
+		var x = document.getElementById('ricerca');
+		 x.classList.add('ombra');
+	}
+	
+	function removeOmbra()
+	{
+		var x = document.getElementById('ricerca');
+		 x.classList.remove('ombra');
+	}
+</script>
+</body>
+</html>

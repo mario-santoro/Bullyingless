@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento senza titolo</title>
+<link href="stile/registrazione.css" rel="stylesheet" type="text/css">
+<link href="stile/template.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Hind+Madurai" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <script>function on() {
+     document.getElementById("overlay").style.display = "block";
+ }
+function off() {
+   document.getElementById("overlay").style.display = "none";
+ }</script>
+  
+</head>
+<body>
+<nav>
+<div id="immagine">
+    	<img src="img/logo.jpg"/> 
+  </div>
+	
+	
+	
+</nav>
+
+<div id="spazio"></div>
+<main onClick="removeOmbra()">
+	
+	<div id="overlay">
+		<div id="popOfferta">
+		<span class="glyphicon glyphicon-remove" onclick="off()"></span>
+			<h2>Annullare la registrazione?</h2>
+				
+			
+			<div id="btnContent">
+				<a href="index.html"><input class="btn-overlay" value="si" type="button" ></a>
+				<input class="btn-overlay" id="annulla2" value="no" type="button" onclick="off()">
+			</div>
+			
+		</div>
+	</div>
+	
+	
+	<div id="ContenitoreRegistrazione">
+	
+<h2>La tua registrazione richiederà solo un minuto</h2>
+<br>
+	<!-- Form di Registrazione -->
+	
+	<div id="registrazione">
+
+	
+	  <label>Nome</label>
+	  <br>
+      <input type="text" class="FormInput"  name="Nome" placeholder="Nome" required/>
+      <br>
+       <br>
+      <label>Cognome</label>
+      <br>
+      <input type="text" class="FormInput" name="Cognome" placeholder="Cognome" required />
+      <br>
+       <br>
+        <label>Nickname</label>
+      <br>
+      <input type="text" class="FormInput" name="nickname" placeholder="Nickname" required />
+      <br>
+       <br>
+      <label>Sesso</label>
+      <br>
+      <select  class="FormInput" name="sex" required >
+      <option>Uomo</option>
+      <option>Donna</option>
+      </select>
+      <br>
+       <br>
+    <label>Data di nascita</label>
+    <br>
+      <input type="date" class="FormInput" name="data" placeholder="nascita" required />
+      <br>
+       <br>
+      <label>E-mail</label>
+      <br>
+     <input class="FormInput" type="email" name="Email" placeholder="Email" required />
+     <br>
+      <br>
+   <label>Password</label>
+   <br>
+      <input class="FormInput"  type="password" name="Password" id="Password" placeholder="Password" required />
+      <br>
+       <br>
+      <label>Conferma Password</label>
+      <br>
+      <input class="FormInput"  type="password" name="ConfermaPassword" placeholder="ConfermaPassword" required />
+    <br>
+     <br>
+     <input id="annulla" class="btnR" type="submit" value="Annulla registrzione" onclick="on()"/>
+    <a href="indexReg.html"><input  class="btnR" type="submit" value="Registrati(simula)"/></a>
+    <br>
+      <a href="errRegistrazione.html"><span>(simula registrazione errata)</span></a>
+      
+	</div>
+
+</div>
+	
+</main>
+
+<script>
+	function addOmbra()
+	{
+		var x = document.getElementById('ricerca');
+		 x.classList.add('ombra');
+	}
+	
+	function removeOmbra()
+	{
+		var x = document.getElementById('ricerca');
+		 x.classList.remove('ombra');
+	}
+</script>
+</body>
+</html>

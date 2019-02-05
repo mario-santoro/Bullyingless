@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Documento senza titolo</title>
+    <link href="stile/homepage.css" rel="stylesheet" type="text/css">
+    <link href="stile/template.css" rel="stylesheet" type="text/css">
+    <link href="stile/listStorie.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div id="ricerca-content">
+            <span id="ricerca" onClick="addOmbra()"><input type="search" placeholder="Ricerca"><button type="button"><span
+                        class="glyphicon glyphicon-search"></span></button></span>
+        </div>
+        <div id="login-content">
+            <a>
+                <button type="button" class="l"><span id="text-login">Log-in</span> <span class="glyphicon glyphicon-log-in"></span></button>
+            </a>
+        </div>
+
+
+        <div id="pannellino">
+            <div id="contenutipannellino">
+                E-mail<br>
+                <input type="email" class="login-element" placeholder="e-mail"><br>
+                Password<br>
+                <input class="login-element" type="password" placeholder="password"><br>
+                <br>
+                <div id="accBtn-regLink">
+                    <a href="indexReg.html"><input type="button" value="Accedi (Simula)" class="btnR"></a>
+                    <br>
+                    <a href="registrazione.html" class="link">Registrati! (simula)</a>
+                    <span class="login-errato" onClick="on()">Simula login errato</span>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div id="overlay">
+            <div id="popOfferta">
+                <span class="glyphicon glyphicon-remove" onclick="off()"></span>
+                <h3>Login non effettuato correttamente</h3>
+                <span>Reinserire credenziali d'accesso</span>
+            </div>
+        </div>
+
+
+
+
+    </nav>
+    <aside onClick="removeOmbra()">
+        <div id="logo-content">
+            <img src="img/logo.jpg" />
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a id="one" href="#">Home</a></li>
+                <li><a id="two" href="#">Bullismo</a></li>
+                <li><a id="three" href="#">CyberBullismo</a></li>
+                <li><a id="four" href="#">Chiedi aiuto</a></li>
+                <li><a id="five" href="#">Forum</a></li>
+            </ul>
+        </div>
+    </aside>
+    <div id="spazio"></div>
+    <main onClick="removeOmbra()">
+            <div id="receiveHelp">
+                    <span class="labelAside"><a href="help.html"><span class="glyphicon glyphicon-plus"></span><span class="textLabel">Ricevi aiuto adesso</span></a></span> <!-- c'è la pagina fai il collegamento -->
+            </div>
+            <div id="buttonAdd">
+                    <span class="labelAside"><a href="gestisciStorie.html"><span class="glyphicon glyphicon-plus"></span><span class="textLabel">Aggiungi storia</span></a></span> <!-- c'è la pagina fai il collegamento -->
+            </div>
+        <div id="containerStories">
+            <div class="storyBox">
+                <div class="titleStory">
+                    <h3>Ciro 21 anni</h3>
+                </div>
+                <div class="bodyStory">
+                    <p>Ciao. Sono Ciro ho 21 anni e sono stato vittima di bullismo. All’età di 11 anni, quando facevo la scuola media nel mio paese, un ragazzo di nome L. mi prese di mira, umiliandomi in tutti i modo possibili. Insieme ad alcuni suoi amici mi aspettarono davanti  a scuola e mi picchiarono in 6, io ero da solo. Per mia fortuna, un genitore di una mia amica intervenne e mi salvò, perché altrimenti, ne sono sicuro, mi avrebbero ammazzato di botte.
+
+                        Un episodio che mi segnò molto sia fisicamente che mentalmente fu, quando, approfittando dell’assenza dei professori mi chiusero a chiave in una classe vuota. Mi legarono le mani e si tolsero le cinture dai loro jeans e mi frustarono ripetutamente. Ebbi ferite in tutte le parti del corpo. Non parlai a nessuno di quanto accaduto, mi vergognavo. Questi episodi di violenza andarono avanti e mi ritrovai con il polso slogato e lividi. Fu un anno e mezzo di dolore, lacrime e sofferenze. Vi chiederete la preside che faceva? I miei genitori andarono a parlare con la preside e la preside disse loro: “Mi dispiace che debbano perdere l’anno”.</p>
+                </div>
+                <div class="footerStory">
+                    <span class="glyphicon glyphicon-comment"></span> 5 commenti
+                </div>
+            </div>
+            <div class="storyBox">
+                <div class="titleStory">
+                    <h3>Angelo 15 anni</h3>
+                </div>
+                <div class="bodyStory">
+                    <p>Ultimamente ho dei problemi con i miei amici. Non mi invitano più ad uscire con loro perchè dicono che non mi vesto alla moda come loro</p>
+                </div>
+                <div class="footerStory">
+                    <span class="glyphicon glyphicon-comment"></span> 0 commenti
+                </div>
+            </div>
+            <div class="storyBox">
+                <div class="titleStory2">
+                    <h3>Raffaella 12 anni</h3>
+                </div>
+                <div class="bodyStory">
+                    <p>Mi ha contattato un uomo su facebook e mi sono innamorata di lui. Ho scoperto che era solo un brutto scherzo dei miei amici che mi prendevano in giro. :( </p>
+                </div>
+                <div class="footerStory">
+                    <span class="glyphicon glyphicon-comment"></span> 2 commenti
+                </div>
+            </div>
+            <div class="storyBox">
+                <div class="titleStory2">
+                    <h3>Francesca 16 anni</h3>
+                </div>
+                <div class="bodyStory">
+                    <p>Due mie compagne di classe, in un momento in cui io ero girata di spalle alla classe per parlare con un professore, mi hanno scattato una foto che successivamente è stata postata sui social network (nuovo dato: io non avevo alcun profilo, né un computer o un telefono in mio possesso). Una mia professoressa se ne accorse e intervenne nel minor tempo possibile. Se ne parlò sia con i genitori, sia con noi ragazzi e anche questa volta la questione si risolse nel modo migliore. L'anno passò velocemente e in un batter d'occhio mi ritrovai catapultata in terza media e a Natale mi venne regalato un netbook da utilizzare per redigere la mia tesina dell'esame. Subito mi feci un indirizzo email e con il permesso dei miei creai un account su Skype per sentire i miei parenti e mi collegai anche con alcune mie compagne di classe. Proprio da questo account e proprio da una di quelle compagne venni a conoscenza, in primavera appena iniziata, che qualche spiritoso si spacciava per me su Facebook da chissà quanto tempo e che questo profilo parlava male di me e delle persone a cui tenevo di più.</p>
+                </div>
+                <div class="footerStory">
+                    <span class="glyphicon glyphicon-comment"></span> 15 commenti
+                </div>
+            </div>
+            <div class="storyBox">
+                <div class="titleStory2">
+                    <h3>Flavia 18 anni</h3>
+                </div>
+                <div class="bodyStory">
+                    <p>Sono Flavia, ho 18 anni e sono al quinto anno del liceo delle scienze umane. 
+                        Qualche anno fa, dalla terza elementare fino alla prima metà del primo liceo, sono stata bersaglio di bullismo e cyberbullismo: prima il mio bulletto e il suo gregge di pecoroni che lo supportava (alle volte anche inconsapevolmente) mi disturbavano con prese in giro sul mio aspetto fisico (piccolo dettaglio omesso: soffro tuttora di un'obesità grave, ma non è un valido motivo per prendermi in giro) oppure mi rompevano tutti i materiali di scuola come quaderni e penne. </p>
+                </div>
+                <div class="footerStory">
+                    <span class="glyphicon glyphicon-comment"></span> 3 commenti
+                </div>
+            </div>
+            <div class="storyBox">
+                <div class="titleStory">
+                    <h3>Mario 15 anni</h3>
+                </div>
+                <div class="bodyStory">
+                    <p>Gli scherzi e il bullismo nei miei confronti iniziò molto presto, fin dall’inizio delle scuole elementari. In realtà non ho un solo ricordo della mia infanzia e della scuola in cui non fossi vittima di insulti, derisioni e umiliazioni. Non sono mai stati atti eclatanti, non ci sono mai state le aggressioni fisiche che si vedono ad esempio nei video in rete, ma si trattava di una violenza psicologica, quasi nascosta e impercettibile.
+
+                        Ad esempio, ridevano di me alle mie spalle, li sentivo bisbigliare, mi guardavano male, tutta la classe si era unita in un gruppo compatto da cui ero escluso. Sono stata emarginato, un bullo aveva così tanta influenza sulla classe che convinse anche il mio migliore amico a non rivolgermi più la parola e anche lui si trasformò in un bullo che mi prendeva in giro per essere accettata in questo gruppo. Chi non rispettava le regole, cioè non parlarmi e non starmi vicino, non faceva più parte del gruppo. Ovviamente nessuno si schierava dalla mia parte.</p>
+                </div>
+                <div class="footerStory">
+                    <span class="glyphicon glyphicon-comment"></span> 0 commenti
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function on() {
+            document.getElementById("overlay").style.display = "block";
+        }
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+        }
+
+        $(".l").click(function () {
+            $("#pannellino").toggle();
+        });
+
+        function addOmbra() {
+            var x = document.getElementById('ricerca');
+            x.classList.add('ombra');
+        }
+
+        function removeOmbra() {
+            var x = document.getElementById('ricerca');
+            x.classList.remove('ombra');
+        }
+
+        $(function(){
+  $('#containerStories').masonry({
+      // options
+    itemSelector : '.storyBox'
+  })
+})
+    </script>
+
+
+</body>
+
+</html>
