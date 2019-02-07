@@ -3,12 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Bullyingless</title>
-
+<link href="stile/homepage.css" rel="stylesheet" type="text/css">
 <link href="stile/template.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Hind+Madurai" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link href="stile/gestisciStorie.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -24,8 +23,9 @@
 		<button type="button" class="l" ><span id="text-login" >Log-in</span> <span class="glyphicon glyphicon-log-in"></span></button>
 		</a>
 	</div>
-      
-     <div id="pannellino">
+	
+	
+	 <div id="pannellino">
           <div id="contenutipannellino">
         E-mail<br>
         <input type="email" class="login-element" placeholder="e-mail"><br>
@@ -36,32 +36,27 @@
 			<a href="indexReg.html"><input type="button" value="Accedi (Simula)" class="btnR"></a>
 		   <br>
 			<a href="registrazione.html" class="link">Registrati! (simula)</a>
+      		<span class="login-errato" onClick="on()">Simula login errato</span>
        </div>
 
         
      </div>
-      </div>  
+      </div>
       
-	<div id="overlay">
+      
+      	<div id="overlay">
 		<div id="popOfferta">
 		<span class="glyphicon glyphicon-remove" onclick="off()"></span>
-			<h3 class="message">Cancellazione Storia</h3>
-			<span>Cancellazione effettuata con successo</span>
+			<h3>Login non effettuato correttamente</h3>
+			<span>Reinserire credenziali d'accesso</span>
 		</div>
 	</div>
-    
-    <div id="overlay2">
-		<div id="popOfferta2">
-		<span class="glyphicon glyphicon-remove" onclick="off2()"></span>
-			<h3 class="message">Modifica Storia</h3>
-			<span>Modifica effettuata con successo</span>
-		</div>
-	</div>  
+      
+      
+      
+      
+      
 </nav>
-
-      
-      
-      
 <aside onClick="removeOmbra()">
 	<div id="logo-content">
     	<img src="img/logo.jpg"/> 
@@ -78,37 +73,17 @@
     	</ul>
     </div>
 </aside>
-<div id="spazio"></div>
 <main onClick="removeOmbra()">
-	<div id="container-gestione">
-		<h3>Ecco le tue Storie!</h3>
-		<div id="option-container">
-			<select class="operator">
-				<option hidden="on">Seleziona storia</option>
-				<option>Storia 1</option>
-				<option>Storia 2</option>
-				<option>Storia 3</option>
-				<option>Storia 4</option>
-			</select>
-			<button type="button" class="operator" onClick="on() ">Cancella(Simula)</button>
-		</div>
-		<textarea cols="90" rows="10">
-			Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
-		</textarea>
-		<div id="btn-container">
-			<button type="button" class="bottone" onClick="on2()">Modifica(Simula)</button>
-		</div>
-	</div>
-	
-</main>
-<script>
-	function on2() {
-    document.getElementById("overlay2").style.display = "block";
-	}
-	function off2() {
-	  document.getElementById("overlay2").style.display = "none";
-	}
+<h1>Che cos’è il cyberbullismo?</h1>
+<p>
+    Internet ha aperto nuove possibilità per tutti noi. L’altra faccia della medaglia è però rappresentata dai rischi legati ad un uso improprio di questo strumento: tra questi c’è il cyberbullismo. 
 
+    Per i giovani che stanno crescendo a contatto con le nuove tecnologie, la distinzione tra vita online e vita offline è davvero minima. Le attività che i ragazzi svolgono online o attraverso i media tecnologici hanno quindi spesso conseguenze anche nella loro vita reale. Allo stesso modo, le vite online influenzano anche il modo di comportarsi dei ragazzi offline, e questo elemento ha diverse ricadute che devono essere prese in considerazione per comprendere a fondo il cyberbullismo.
+    
+</p>
+</main>
+
+<script>
 	function on() {
     document.getElementById("overlay").style.display = "block";
 	}
