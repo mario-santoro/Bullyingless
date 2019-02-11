@@ -1,0 +1,95 @@
+#myCarousel{
+	margin:45px;
+	margin-bottom: 15px;
+	height: 600px;
+	width: 800px;
+	display: inline-block;
+	border-radius: 15px;
+	-webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
+}
+
+#myCarousel img{
+	border-radius: 15px;
+}
+.carousel-control{
+	border-radius: 15px;
+}
+.item{
+	border-radius: 15px;
+}
+.carousel-caption{
+	border-radius: 15px;
+	font-size: 1.8em;
+	font-weight: bold;
+	background: #00b3e585;
+	width: 100%;
+	margin-left: -160px;
+}
+.carousel-inner{
+	border-radius: 15px;
+}
+
+
+
+
+
+
+.contenitore{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	text-align: left;
+	background-color: #00b4e5;
+	border-radius: 15px;
+	color:white;
+	font-size: 1.3em;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+	}
+	
+.contenitore button{
+	margin: 5px;
+	padding: 10px;
+	outline: none;
+	background-color:white;
+	height: 50px;
+	
+	border-radius: 10px;
+	color: #00b4e5;
+	font-weight: bold;
+	font-size: 1em;
+	-webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+}
+
+.contenitore button:hover{
+	-webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+	box-shadow: 0p;
+	
+}
+.contenitore button:active{
+	-webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+	box-shadow: 0p;
+	background-color:rgba(204, 204, 204, 0.288);
+	
+}
+
+
+.text{
+	height: 300px;	
+	padding: 10px;
+	margin-left: 450px;
+	
+}
+.contenitore img{
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	height: 300px;
+	width: 450px;
+	float:left;
+}

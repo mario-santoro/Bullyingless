@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Bullyingless</title>
+	
+	<link href="stile/template.css" rel="stylesheet" type="text/css">
+	<link href="stile/bullismo.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Hind+Madurai" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="loadPage()">
+	<nav>
+		<div id="imgNav">
+			<img src="img/nav.png">
+		</div>
+	
+
+		<div id="login-content">
+			<button type="button" class="l" id="accedi"><span>Log-in</span><br> <span
+				class="glyphicon glyphicon-log-in"></span></button>
+			<a href="registrazione.html"><button type="button" id="registrati"><span>Registrati</span><br> <span
+				  class="glyphicon glyphicon-user"></span></button></a>
+			<span class="loggato" id="login-btn1"><span id="utente">Utente</span><br> <span class="glyphicon glyphicon-user"></span></span>
+			<button type="button" class="loggato" id="login-btn2"><a href="visualizzaMieStorie.html"><span>Tue storie<br><span class="glyphicon glyphicon-book"></span></span></a></button>
+			<button type="button" class="loggato" id="login-btn3"><span onclick="logout()">Log-out<br><span class="glyphicon glyphicon-log-out"></span></span></button>
+		  </div>
+		 
+		<div id="pannellino">
+			<div id="contenutipannellino">
+				E-mail<br>
+				<input type="email" class="login-element" placeholder="e-mail" id="email"><br>
+				Password<br>
+				<input class="login-element" type="password" placeholder="password" id="password"><br>
+				<br>
+				<div id="accBtn-regLink">
+					<button class="btnR" onclick="login()" type="button">Accedi</button>
+				</div>
+
+
+			</div>
+		</div>
+
+
+		<div id="overlay">
+			<div id="popOfferta">
+				<span class="glyphicon glyphicon-remove" onclick="off()"></span>
+				<h3>Login non effettuato correttamente</h3>
+				<span>Reinserire credenziali d'accesso</span>
+			</div>
+		</div>
+
+		
+	  
+
+
+
+	</nav>
+	<aside onclick="removeOmbra()">
+		<div id="logo-content">
+			<img src="img/aside.jpg" />
+		  </div>
+		<div id="menu">
+			<ul>
+				<li><a id="one" href="index.html">Home</a></li>
+				<li><a id="two" href="bullismoInfo.html">Bullismo</a></li>
+				<li><a id="three" href="cyberInfo.html">CyberBullismo</a></li>
+				<li><a id="four" href="questionario.html">Questionario</a></li>
+
+				<li><a id="six" href="listStorie.html">Forum</a></li>
+				<li><a id="seven" href="contatti.html">Contatti Utili</a></li>
+			</ul>
+		</div>
+		<div id="socialBar">
+			<span id="labelSocial">Seguici su:</span><br>
+			<span><a href="#" class="linkFooter"><img src="img/facebook.svg" width="32" height="32"></a></span>
+			<span><a href="#" class="linkFooter"><img src="img/instagram.svg" width="32" height="32"></a></span>
+			
+			<span><a href="#" class="linkFooter"><img src="img/linkedin.svg" width="32" height="32"></a></span>
+		  </div>
+	</aside>
+	<main onclick="removeOmbra()">
+		<p id="titolo">Che cos’è il bullismo?</p>
+		<p id="testo">
+			<!-- testo preso dal sito  https://www.stopbullying.gov/what-is-bullying/index.html -->
+			Per essere considerato bullismo, il comportamento deve essere aggressivo e includere:
+			<br><br><span class="titolini">
+				Uno squilibrio di potere: </span>
+			<br>
+			i bambini che usano prepotentemente il loro potere - come la forza fisica, l'accesso a informazioni
+			imbarazzanti o la popolarità - per controllare o danneggiare gli altri.
+			<br>
+			Gli squilibri di potere possono cambiare nel tempo e in situazioni diverse, anche se coinvolgono le stesse
+			persone.
+			<br>
+			<br>
+			<span class="titolini">Ripetizione:</span> i comportamenti di bullismo si verificano più di una volta o
+			hanno la possibilità di accadere più di una volta.
+			Il bullismo include azioni come fare minacce, diffondere voci, attaccare qualcuno fisicamente o verbalmente
+			ed escludere di proposito qualcuno di un gruppo.
+			<br>
+			<br>
+			<span class="titolini">Esistono tre tipi di bullismo:</span>
+			<br>
+			<span class="titolini">Il bullismo verbale sta dicendo o scrivendo cose cattive. Il bullismo verbale
+				include:</span>
+			<br>
+			Stuzzicando
+			<br>
+			Insulti
+			<br>
+			Commenti sessuali inappropriati
+			<br>
+			Minacciando di causare danni
+			<br>
+			<br>
+			<span class="titolini">Poi abbiamo il bullismo sociale, a volte indicato come bullismo relazionale, comporta
+				il danneggiamento della reputazione o delle relazioni di qualcuno.</span>
+			<br>
+			Il bullismo sociale include:
+			<br>
+			Lasciare qualcuno fuori di proposito
+			<br>
+			Dire agli altri bambini di non essere amici con qualcuno
+			<br>
+			Diffusione di voci su qualcuno
+			<br>
+			Imbarazzare qualcuno in pubblico
+			<br>
+			<br>
+			<span class="titolini">Infine il bullismo fisico, che comporta il ferimento del corpo o dei beni di una
+				persona. </span>
+			<br>
+			Il bullismo fisico include:
+			<br>
+			Colpire / calci / pizzicare
+			<br>
+			Spitting
+			<br>
+			Tripping / spingendo
+			<br>
+			Prendere o rompere le cose di qualcuno
+			<br>
+			Fare gesti delle mani mediocri o maleducati
+			<br>
+			<br>
+			<span class="titolini">Dove e quando accade il bullismo</span>
+			<br>
+			Il bullismo può verificarsi durante o dopo l'orario scolastico. Mentre la maggior parte del bullismo
+			segnalato avviene nell'edificio scolastico, una percentuale significativa si verifica anche in luoghi come
+			il parco giochi o l'autobus. Può anche accadere di viaggiare da o verso la scuola, nel quartiere dei giovani
+			o su Internet.
+			<br>
+
+		</p>
+	</main>
+
+	<script src="js/data.js"></script>
+</body>
+
+</html>

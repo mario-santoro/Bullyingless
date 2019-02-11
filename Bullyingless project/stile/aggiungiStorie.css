@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+#container-gestione{
+	display: inline-block;
+	background-color: #00b4e5;
+	width: 800px;
+	padding: 25px;
+	border-radius: 30px;
+	margin-top: 20px;
+	
+	-webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
+}
+#container-gestione h3{
+	text-align: center;
+	margin-bottom: 20px;
+}
+#container-gestione textarea{
+	border-radius: 10px;
+	outline: none;
+}
+textarea{
+	padding: 25px;
+}
+
+
+#btn-container{
+	text-align: right;
+}
+#btn-container button{
+	margin-top: 25px;
+	margin-right: 47px;
+	
+}
+
+.bottone{
+	margin: 5px;
+	padding: 10px;
+	outline: none;
+	background-color:white;
+	height: auto;
+	border-radius: 10px;
+	color: #00b4e5;
+	font-weight: bold;
+	font-size: 1.2em;
+	-webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+}
+
+

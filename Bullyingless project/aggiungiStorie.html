@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Documento senza titolo</title>
+
+	<link href="stile/template.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Hind+Madurai" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link href="stile/aggiungiStorie.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="loadPage()">
+	<nav>
+		<div id="imgNav">
+			<img src="img/nav.png">
+		</div>
+	
+	
+
+		<div id="login-content">
+			<button type="button" class="l" id="accedi"><span>Log-in</span><br> <span
+				class="glyphicon glyphicon-log-in"></span></button>
+			<a href="registrazione.html"><button type="button" id="registrati"><span>Registrati</span><br> <span
+				  class="glyphicon glyphicon-user"></span></button></a>
+			<span class="loggato" id="login-btn1"><span id="utente">Utente</span><br> <span class="glyphicon glyphicon-user"></span></span>
+			<button type="button" class="loggato" id="login-btn2"><a href="visualizzaMieStorie.html"><span>Tue storie<br><span class="glyphicon glyphicon-book"></span></span></a></button>
+			<button type="button" class="loggato" id="login-btn3"><span onclick="logout()">Log-out<br><span class="glyphicon glyphicon-log-out"></span></span></button>
+		  </div>
+		 
+		<div id="pannellino">
+			<div id="contenutipannellino">
+				E-mail<br>
+				<input type="email" class="login-element" placeholder="e-mail" id="email"><br>
+				Password<br>
+				<input class="login-element" type="password" placeholder="password" id="password"><br>
+				<br>
+				<div id="accBtn-regLink">
+					<button class="btnR" onclick="login()" type="button">Accedi</button>
+				</div>
+
+
+			</div>
+		</div>
+
+
+		<div id="overlay">
+            <div id="popOfferta">
+              <span class="glyphicon glyphicon-remove" onclick="off()"></span>
+              <h3>Storia aggiunta con successo.</h3>
+      
+      
+              <div id="btnContent">
+                <input class="btnForm"  value="OK" type="button" onclick=" return window.location.replace('listStorie.html')">
+              </div>
+      
+            </div>
+          </div>
+
+
+		
+	  
+
+
+	</nav>
+	<aside onclick="removeOmbra()">
+		
+<div id="logo-content">
+	<img src="img/aside.jpg" />
+  </div>
+
+		<div id="menu">
+			<ul>
+				<li><a id="one" href="index.html">Home</a></li>
+				<li><a id="two" href="bullismoInfo.html">Bullismo</a></li>
+				<li><a id="three" href="cyberInfo.html">CyberBullismo</a></li>
+				<li><a id="four" href="questionario.html">Questionario</a></li>
+
+				<li><a id="six" href="listStorie.html">Forum</a></li>
+				<li><a id="seven" href="contatti.html">Contatti Utili</a></li>
+			</ul>
+		</div>
+		
+<div id="socialBar">
+	<span id="labelSocial">Seguici su:</span><br>
+	<span><a href="#" class="linkFooter"><img src="img/facebook.svg" width="32" height="32"></a></span>
+	<span><a href="#" class="linkFooter"><img src="img/instagram.svg" width="32" height="32"></a></span>
+	
+	<span><a href="#" class="linkFooter"><img src="img/linkedin.svg" width="32" height="32"></a></span>
+  </div>
+	</aside>
+	<div id="spazio"></div>
+	<main onclick="removeOmbra()">
+		<div id="container-gestione">
+			<h3>Inserisci la tua Storia!</h3>
+			<textarea cols="90" rows="10" id="tua-Storia"></textarea>
+			<div id="btn-container">
+				<button type="button" class="bottone" onclick="setStoria()">Inserisci</button>
+			</div>
+		</div>
+
+	</main>
+
+	<script src="js/data.js"></script>
+</body>
+
+</html>
