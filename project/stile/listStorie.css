@@ -1,0 +1,85 @@
+.storyBox{
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.75);
+    width: 270px;
+    height: auto;
+    display: inline-block;
+    margin: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    vertical-align: top;
+    
+}
+
+.glyphicon-remove{
+    margin: 5px;
+    float:right;
+    color: rgb(129, 124, 55);
+    cursor: pointer;
+}
+.glyphicon-remove:hover{
+    color: rgb(87, 83, 38);
+}
+.titleStory{
+    background-color: rgb(53, 116, 211);
+    padding: 10px;
+    padding-top: 1px;
+    color: white;
+    text-align: left;
+}
+.titleStory2{
+    background-color:violet;
+    padding: 10px;
+    padding-top: 1px;
+    color: white;
+    text-align: left;
+}
+.titleStory3{
+    background-color: rgb(233, 172, 3);
+    padding: 10px;
+    padding-top: 1px;
+    color: white;
+    text-align: left;
+}
+.bodyStory{
+    background-color: white;
+    text-align: left;
+    padding:5px;
+    border: 1px solid lightgray;
+}
+#containterStories{
+    text-align: center;
+}
+#buttonAdd{
+    margin: 20px;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+#buttonAdd:hover{
+    transform: scale(1.02,1.02);
+}
+.glyphicon-plus{
+    font-size: 0.8em;
+    background-color: #00b4e5;
+    color:white;
+    height: 40px;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    vertical-align: top;
+}
+.textLabel{
+    background-color:  #00b4e5;
+    color:white;
+    font-weight: bold;
+    height: 40px;
+    padding: 10px;
+    padding-top: 11px;
+    padding-bottom: 13px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    vertical-align: -10px;
+}

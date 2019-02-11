@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bullyingless</title>
+    
+    <link href="stile/template.css" rel="stylesheet" type="text/css">
+    <link href="stile/contatti.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="loadPage()">
+    <nav>
+        <div id="imgNav">
+            <img src="img/nav.png">
+        </div>
+    
+
+        <div id="login-content">
+            <button type="button" class="l" id="accedi"><span>Log-in</span><br> <span
+                class="glyphicon glyphicon-log-in"></span></button>
+            <a href="registrazione.html"><button type="button" id="registrati"><span>Registrati</span><br> <span
+                  class="glyphicon glyphicon-user"></span></button></a>
+            <span class="loggato" id="login-btn1"><span id="utente">Utente</span><br> <span class="glyphicon glyphicon-user"></span></span>
+            <button type="button" class="loggato" id="login-btn2"><a href="visualizzaMieStorie.html"><span>Tue storie<br><span class="glyphicon glyphicon-book"></span></span></a></button>
+            <button type="button" class="loggato" id="login-btn3"><span onclick="logout()">Log-out<br><span class="glyphicon glyphicon-log-out"></span></span></button>
+          </div>
+         
+
+        <div id="pannellino">
+            <div id="contenutipannellino">
+                E-mail<br>
+                <input type="email" class="login-element" placeholder="e-mail" id="email"><br>
+                Password<br>
+                <input class="login-element" type="password" placeholder="password" id="password"><br>
+                <br>
+                <div id="accBtn-regLink">
+                    <button class="btnR" onclick="login()" type="button">Accedi</button>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div id="overlay">
+            <div id="popOfferta">
+                <span class="glyphicon glyphicon-remove" onclick="off()"></span>
+                <h3>Login non effettuato correttamente</h3>
+                <span>Reinserire credenziali d'accesso</span>
+            </div>
+        </div>
+
+
+       
+
+
+    </nav>
+    <aside onclick="removeOmbra()">
+        <div id="logo-content">
+            <img src="img/aside.jpg" />
+          </div>
+      
+        <div id="menu">
+            <ul>
+                <li><a id="one" href="index.html">Home</a></li>
+                <li><a id="two" href="bullismoInfo.html">Bullismo</a></li>
+                <li><a id="three" href="cyberInfo.html">CyberBullismo</a></li>
+                <li><a id="four" href="questionario.html">Questionario</a></li>
+
+                <li><a id="six" href="listStorie.html">Forum</a></li>
+                <li><a id="seven" href="contatti.html">Contatti Utili</a></li>
+            </ul>
+        </div>
+        <div id="socialBar">
+            <span id="labelSocial">Seguici su:</span><br>
+            <span><a href="#" class="linkFooter"><img src="img/facebook.svg" width="32" height="32"></a></span>
+            <span><a href="#" class="linkFooter"><img src="img/instagram.svg" width="32" height="32"></a></span>
+            
+            <span><a href="#" class="linkFooter"><img src="img/linkedin.svg" width="32" height="32"></a></span>
+          </div>
+    </aside>
+    <div id="spazio"></div>
+    <main onclick="removeOmbra()">
+
+
+
+        <div class="static-body" id="telefoni">
+
+            <span style="color:#6699ff;"><strong>Telefono Azzurro – Sede di Milano </strong></span>
+
+            <div>via Copernico 1 20125 Milano</div>
+            <div>Telefono 02.550271</div>
+            <div>Fax&nbsp; 0255027200
+                <br>
+                <br>
+                <span style="color:#6699ff;">
+                    <strong>Telefono Azzurro - Sede di Torino</strong>
+                </span>
+
+                &nbsp;
+            </div>
+
+            <div>Corso Rosselli, 128/A - 10141 Torino</div>
+            <div>Telefono 011.4831104&nbsp;</div>
+            <div>Fax 011.4367980
+                <br>
+                <br>
+                <span style="color:#6699ff;">
+                    <strong>Telefono Azzurro – Sede di Treviso</strong>
+                </span>
+
+                &nbsp;
+            </div>
+            <div>
+                <div>Via Isola di Mezzo, 33 - 31100 Treviso</div>
+                <div>Telefono 0422.545404</div>
+                <div>Fax 0422.545413
+                    <br>
+                    <br>
+                    <span style="color:#6699ff;">
+                        <strong>Telefono Azzurro - Sede di Modena</strong>
+                    </span>
+
+                    &nbsp;
+                </div>
+            </div>
+
+            <div>Via Emilia Est, 421 - 41100 Modena</div>
+            <div>Telefono 059.9787.000&nbsp;</div>
+            <div>Fax 059.9787.007
+                <br>
+                <br>
+                <span style="color:#6699ff;"><strong>Telefono Azzurro - Sede di Firenze</strong></span>
+
+                &nbsp;
+            </div>
+
+            <div>
+                <div>Borgo Tegolaio, 7 - 50123 Firenze</div>
+                <div>Telefono 055.5387420</div>
+                <div>Fax 055.5387421
+                    <br>
+                    <br>
+                    <span style="color:#6699ff;"><strong>Telefono Azzurro - Sede di Roma</strong></span>
+
+                    &nbsp;
+                </div>
+            </div>
+
+            <div>Piazza Forlanini 1, Pal. R - 00151 Roma
+                &nbsp;
+                &nbsp;
+            </div>
+
+            <div>Telefono 06.95219201</div>
+            <div>Fax 06.95219220
+                <br>
+                <br>
+                <span style="color:#6699ff;"><strong>Telefono Azzurro - Sede di Napoli</strong></span>
+
+                &nbsp;
+            </div>
+            <div>Via della Giudecca Vecchia, 29 - 80139 Napoli</div>
+            <div>Telefono 081.0140648</div>
+            <div>Fax&nbsp; 081.01536101
+                <br>
+                <br>
+                <span style="color:#6699ff;"><strong>Telefono Azzurro - Sede di Palermo</strong></span>
+
+                &nbsp;
+            </div>
+            <div>Via Lussemburgo 68 - 90146 Palermo</div>
+            <div>Telefono 091.7659600</div>
+            <div>Fax&nbsp; 091.7659601</div>
+            <div>&nbsp;</div>
+        </div>
+
+
+
+
+    </main>
+    <script src="js/data.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bullyingless</title>
+  <link href="stile/template.css" rel="stylesheet" type="text/css">
+  <link href="stile/registrazione.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Hind+Madurai" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+  <script>
+    function on() {
+      document.getElementById("overlay").style.display = "block";
+    }
+    function off() {
+      document.getElementById("overlay").style.display = "none";
+    }</script>
+
+</head>
+
+<body>
+  <nav>
+    <div id="immagine">
+      <img src="img/logo.jpg" style="
+      width: 250px;
+  " />
+    </div>
+
+
+
+  </nav>
+
+  <main onclick="removeOmbra()">
+
+    <div id="overlay">
+      <div id="popOfferta">
+        <span class="glyphicon glyphicon-remove" onclick="off()"></span>
+        <h2>Annullare la registrazione?</h2>
+
+
+        <div id="btnContent">
+          <a href="index.html"><input class="btn-overlay" value="Si" type="button"></a>
+          <input class="btn-overlay" id="annulla2" value="No" type="button" onclick="off()">
+        </div>
+
+      </div>
+    </div>
+
+
+    <div id="ContenitoreRegistrazione">
+
+      <h2>La tua registrazione richiederà solo un minuto</h2>
+      <br>
+      <!-- Form di Registrazione -->
+
+      <div id="registrazione">
+
+
+        <label>Nickname</label>
+        <br>
+        <input type="text" class="FormInput" name="nickname" placeholder="Nickname" id="nickname" required />
+        <br>
+        <br>
+        <label>Sesso</label>
+        <br>
+        <select class="FormInput" name="sex" id="sex" required>
+          <option>Uomo</option>
+          <option>Donna</option>
+        </select>
+        <br>
+        <br>
+        <label>Eta'</label>
+        <br>
+        <input type="number" class="FormInput" name="eta" placeholder="eta'" id="eta" required />
+        <br>
+        <br>
+        <label>E-mail</label>
+        <br>
+        <input class="FormInput" type="email" name="Email" placeholder="Email" id="email" required />
+        <br>
+        <br>
+        <label>Password</label>
+        <br>
+        <input class="FormInput" type="password" name="Password" id="password" placeholder="Password" required />
+        <br>
+        <br>
+        <label>Conferma Password</label>
+        <br>
+        <input class="FormInput" type="password" name="ConfermaPassword" placeholder="ConfermaPassword" id="conferma"
+          required />
+        <br>
+        <br>
+        <button class="btnForm" id="annulla" type="button" onclick="on()">Annulla</button>
+        <button id="Reg" class="btnForm" type="button" onclick="createUser()">Continua</button>
+
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <script src="js/data.js"></script>
+  <script src="js/cookie.js"></script>
+</body>
+
+</html>
