@@ -1,5 +1,3 @@
-
-
 var email = "user@utente.it";
 var pass = "0000";
 var nickname = "angfor";
@@ -14,9 +12,7 @@ var psForm;
 var myJSON2;
 var storiaJ;
 var myStoria;
-
 var storia = [];
-
 
 $(document).ready(function () {
 	var text = localStorage.getItem("StoriaJSON");
@@ -34,8 +30,8 @@ $(document).ready(function () {
 		$('#' + i + '').append('<div class="bodyStory"><p>' + obj.storia[i] + '</p></div>');
 		i++;
 	} while (obj.storia[i] != undefined)
-
 });
+
 function cancellaStoria(){
 	storiaJ = null;
 	myStoria = JSON.stringify(storiaJ)
@@ -59,9 +55,14 @@ function setStoria() {
 	localStorage.setItem("StoriaJSON", myStoria);
 	document.getElementById("overlay").style.display = "block";
 }
+
 function login() {
 	var text = localStorage.getItem("testJSON");
 	var obj = JSON.parse(text);
+	if(obj==null){
+		alert("Credenziali errate. Reinserisci email o password");
+		return;
+	}
 	emForm = document.getElementById("email").value;
 	psForm = document.getElementById("password").value;
 	myUser = { email: emForm, password: psForm };
@@ -79,11 +80,15 @@ function login() {
 		document.getElementById("utente").innerHTML = obj.nickname;
 	}
 }
+
 function loadPage() {
 	text = localStorage.getItem("testJSON");
 	obj = JSON.parse(text);
 	var textUser = localStorage.getItem("UtenteJSON");
 	var objUser = JSON.parse(textUser);
+	if (obj == null) {
+		return 0;
+	}
 	if (objUser == null) {
 		return 0;
 	}
@@ -103,14 +108,14 @@ function loadPage() {
 	return 0;
 }
 
-
-
 function on() {
 	document.getElementById("overlay").style.display = "block";
 }
+
 function off() {
 	document.getElementById("overlay").style.display = "none";
 }
+
 function off2() {
 	document.getElementById("overlay2").style.display = "none";
 }
@@ -122,20 +127,6 @@ function off3() {
 $(".l").click(function () {
 	$("#pannellino").toggle();
 });
-
-$("#loggato").click(function () {
-	$("#pannello-utente").toggle();
-});
-
-function addOmbra() {
-	var x = document.getElementById('ricerca');
-	x.classList.add('ombra');
-}
-
-function removeOmbra() {
-	var x = document.getElementById('ricerca');
-	x.classList.remove('ombra');
-}
 
 $("#Reg").click(function () {
 	nickname = $("#nickname").val();
@@ -153,20 +144,7 @@ $("#Reg").click(function () {
 	myJSON = JSON.stringify(myObj)
 	localStorage.setItem("testJSON", myJSON);
 	window.location.replace("index.html");
-
 });
-
-
-function f() {
-	var text = localStorage.getItem("testJSON");
-	var obj = JSON.parse(text);
-	alert(obj.nickname);
-	alert(obj.sex);
-	alert(obj.data);
-	alert(obj.email);
-	alert(obj.pass);
-	alert(obj.conferma);
-}
 
 function logout() {
 	myObj = null;
