@@ -49,22 +49,66 @@
             </div>
         </div>
 
-
-         <div id="overlay">
+        <div id="overlay">
             <div id="popOfferta">
               <span class="glyphicon glyphicon-remove" onclick="off()"></span>
+              <h3>Login non effettuato correttamente</h3>
+              <span>Reinserire credenziali d'accesso</span>
+      
+              <div class="btnContent">
+                <input class="btnForm"  value="OK" type="button" onclick=" off()">
+              </div>
+            </div>
+          </div>
+      
+          <div id="overlay2">
+            <div id="popOfferta2">
+              <span class="glyphicon glyphicon-remove" onclick="off2()"></span>
+              <h3>Login effettuato correttamente</h3>
+              <span>Piacere di rivederti!</span>
+      
+              <div class="btnContent">
+                <input class="btnForm"  value="OK" type="button" onclick=" off2()">
+              </div>
+            </div>
+          </div>
+      
+         <div id="overlay3">
+            <div id="popOfferta3">
+              <span class="glyphicon glyphicon-remove" onclick="off3()"></span>
               <h3>Desideri cancellare questa storia?</h3>
       
       
               <div id="btnContent">
-                <a href="#"><input class="btn-overlay" value="Si" onclick="cancellaStoria()" type="button"></a>
-                <input class="btn-overlay" id="annulla2" value="No" type="button" onclick="off()">
+                <a href="#"><input class="btn-overlay" value="Si" onclick="on5()" type="button"></a>
+                <input class="btn-overlay" id="annulla2" value="No" type="button" onclick="off3()">
               </div>
       
             </div>
           </div>
 
-       
+          <div id="overlay4">
+            <div id="popOfferta4">
+              <span class="glyphicon glyphicon-remove" onclick="off4()"></span>
+              <h3>Al momento non puoi inserire storie</h3>
+              <span>Effettua il log-in per poterci raccontare la tua storia!</span>
+      
+              <div class="btnContent">
+                <input class="btnForm"  value="OK" type="button" onclick=" off4()">
+              </div>
+            </div>
+          </div>
+
+          <div id="overlay5">
+            <div id="popOfferta5">
+              <span class="glyphicon glyphicon-remove" onclick="cancellaStoria()"></span>
+              <h3>Storia cancellata correttamente</h3>
+      
+              <div class="btnContent">
+                <input class="btnForm"  value="OK" type="button" onclick=" cancellaStoria()">
+              </div>
+            </div>
+          </div>
       
 
 

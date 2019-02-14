@@ -12,6 +12,10 @@ var psForm;
 var myJSON2;
 var storiaJ;
 var myStoria;
+
+var denied
+var myJSON3
+
 var storia = [];
 
 $(document).ready(function () {
@@ -26,7 +30,7 @@ $(document).ready(function () {
 	var i = 0
 	do {
 		$('#containerStories').append('<div class="storyBox" id="' + i + '"></div>');
-		$('#' + i + '').append('<span class="glyphicon glyphicon-remove" onclick="on()"></span><div class="titleStory3"><h3>' + utente.nickname+" "+utente.eta+" anni" + '</h3></div>');
+		$('#' + i + '').append('<span class="glyphicon glyphicon-remove" onclick="on3()"></span><div class="titleStory3"><h3>' + utente.nickname+" "+utente.eta+" anni" + '</h3></div>');
 		$('#' + i + '').append('<div class="bodyStory"><p>' + obj.storia[i] + '</p></div>');
 		i++;
 	} while (obj.storia[i] != undefined)
@@ -40,12 +44,20 @@ function cancellaStoria(){
 }
 
 function controlloLog() {
-	if (loadPage() == 1) {
+	var text2 = localStorage.getItem("controllo");
+	var obj2 = JSON.parse(text2);
+	if (obj2 == null) {
+		//Devi effettuare il Log-in per inserire una storia
+		document.getElementById("overlay4").style.display = "block";
+	}
+	if (obj2.connesso == 1){
 		window.location.replace("aggiungiStorie.html");
 	}
-	if (loadPage() == 0) {
-		alert("Devi effettuare il Log-in per inserire una storia");
+	if (obj2.connesso == 0) {
+		//Devi effettuare il Log-in per inserire una storia
+		document.getElementById("overlay4").style.display = "block";
 	}
+	
 }
 
 function setStoria() {
@@ -57,20 +69,30 @@ function setStoria() {
 }
 
 function login() {
+	
+
 	var text = localStorage.getItem("testJSON");
 	var obj = JSON.parse(text);
 	if(obj==null){
-		alert("Credenziali errate. Reinserisci email o password");
+		//messaggio login NON riuscito
+		document.getElementById("overlay").style.display = "block";
 		return;
 	}
+	
 	emForm = document.getElementById("email").value;
 	psForm = document.getElementById("password").value;
 	myUser = { email: emForm, password: psForm };
 	myJSON2 = JSON.stringify(myUser)
 	localStorage.setItem("UtenteJSON", myJSON2);
-	if ((emForm != obj.email) || (psForm != obj.pass))
-		alert("Credenziali errate. Reinserisci email o password")
+	if ((emForm != obj.email) || (psForm != obj.pass)){
+		//messaggio login NON riuscito
+		document.getElementById("overlay").style.display = "block";
+		return;
+}
 	if ((emForm == obj.email) && (psForm == obj.pass)) {
+		denied = {connesso:1};
+		myJSON3 = JSON.stringify(denied);
+		localStorage.setItem("controllo", myJSON3);
 		document.getElementById("accedi").style.display = "none";
 		document.getElementById("registrati").style.display = "none";
 		document.getElementById("pannellino").style.display = "none";
@@ -78,24 +100,17 @@ function login() {
 		document.getElementById("login-btn2").style.display = "inline-block";
 		document.getElementById("login-btn3").style.display = "inline-block";
 		document.getElementById("utente").innerHTML = obj.nickname;
+		document.getElementById("overlay2").style.display = "block";
 	}
 }
 
 function loadPage() {
-	text = localStorage.getItem("testJSON");
-	obj = JSON.parse(text);
-	var textUser = localStorage.getItem("UtenteJSON");
-	var objUser = JSON.parse(textUser);
-	if (obj == null) {
-		return 0;
-	}
-	if (objUser == null) {
-		return 0;
-	}
-	if (objUser.email == "") {
-		return 0;
-	}
-	if ((objUser.email == obj.email) && (objUser.password == obj.pass)) {
+	var text2 = localStorage.getItem("controllo");
+	var obj2 = JSON.parse(text2);
+	
+	if (obj2.connesso == 1){
+		var text = localStorage.getItem("testJSON");
+		var obj = JSON.parse(text);	
 		document.getElementById("accedi").style.display = "none";
 		document.getElementById("registrati").style.display = "none";
 		document.getElementById("pannellino").style.display = "none";
@@ -103,13 +118,26 @@ function loadPage() {
 		document.getElementById("login-btn2").style.display = "inline-block";
 		document.getElementById("login-btn3").style.display = "inline-block";
 		document.getElementById("utente").innerHTML = obj.nickname;
-		return 1;
 	}
-	return 0;
+	else{
+	document.getElementById("accedi").style.display = "inline-block";
+	document.getElementById("registrati").style.display = "inline-block";
+	document.getElementById("pannellino").style.display = "none";
+	document.getElementById("login-btn1").style.display = "none";
+	document.getElementById("login-btn2").style.display = "none";
+	document.getElementById("login-btn3").style.display = "none";
+	}
 }
 
 function on() {
 	document.getElementById("overlay").style.display = "block";
+}
+
+function on3() {
+	document.getElementById("overlay3").style.display = "block";
+}
+function on5() {
+	document.getElementById("overlay5").style.display = "block";
 }
 
 function off() {
@@ -123,12 +151,20 @@ function off2() {
 function off3() {
 	document.getElementById("overlay3").style.display = "none";
 }
+function off4() {
+	document.getElementById("overlay4").style.display = "none";
+}
+function off5() {
+	document.getElementById("overlay5").style.display = "none";
+}
+
 
 $(".l").click(function () {
 	$("#pannellino").toggle();
 });
 
 $("#Reg").click(function () {
+	if (validateForm() != false){
 	nickname = $("#nickname").val();
 	sex = $("#sex").val();
 	eta = $("#eta").val();
@@ -143,13 +179,25 @@ $("#Reg").click(function () {
 	myObj = {nickname: nickname, sex: sex, eta: eta, email: email, pass: pass, conferma: conferma };
 	myJSON = JSON.stringify(myObj)
 	localStorage.setItem("testJSON", myJSON);
-	window.location.replace("index.html");
+
+	denied = {connesso:1};
+	myJSON3 = JSON.stringify(denied);
+	localStorage.setItem("controllo", myJSON3);
+	document.getElementById("overlay2").style.display = "block";
+	}
 });
 
 function logout() {
-	myObj = null;
-	myJSON = JSON.stringify(myObj)
-	localStorage.setItem("testJSON", myJSON);
+	denied = {connesso:0};
+	 myJSON3 = JSON.stringify(denied);
+	 localStorage.setItem("controllo", myJSON3);
+
+	document.getElementById("accedi").style.display = "inline-block";
+	document.getElementById("registrati").style.display = "none";
+	document.getElementById("pannellino").style.display = "block";
+	document.getElementById("login-btn1").style.display = "none";
+	document.getElementById("login-btn2").style.display = "none";
+	document.getElementById("login-btn3").style.display = "none";
 	window.location.replace("index.html");
 }
 

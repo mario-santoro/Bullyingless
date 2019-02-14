@@ -291,6 +291,57 @@ aside{
 	z-index: 30;
 	cursor: pointer;
 }
+#popOfferta4 {
+	border-radius: 10px;
+	background-color: white;
+	position: absolute;
+	left: 50%;
+	margin-left: -250px;
+	top: 30%;
+	font-size: 16px;
+	width: 500px;
+	padding: 30px;
+}
+
+#overlay4 {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 30;
+	cursor: pointer;
+}
+#popOfferta5 {
+	border-radius: 10px;
+	background-color: white;
+	position: absolute;
+	left: 50%;
+	margin-left: -250px;
+	top: 30%;
+	font-size: 16px;
+	width: 500px;
+	padding: 30px;
+}
+
+#overlay5 {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 30;
+	cursor: pointer;
+}
+
 
 
 
